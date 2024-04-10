@@ -1,0 +1,261 @@
+.landing__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+}
+
+.landing__page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 40%;
+    gap: 1rem; 
+}
+.landing__page .btn {
+    padding: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 0.3rem;
+}
+.landing__page .btn > a {
+    width: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+.landing__page .create_btn {
+    background-color: #6C25FF;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.landing__page .login_btn {
+    background-color: #CEBAFB;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.btn:active {
+    background-color: white;
+    color: black;
+}
+
+/* signup page */
+.signup__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    height: 70vh;
+}
+
+.signup__page > h1{
+    margin-bottom: 1rem;
+    width: 70%;
+}
+
+.signup__page > form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    height: 100%;
+}
+
+.signup__page > form input{
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 0.4rem;
+}
+
+.label-input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.label-input-container > label {
+    position: absolute;
+    z-index: 1000;
+    background-color: white;
+    font-size: 0.8rem;
+    color: #6C25FF;
+    font-weight: 500;
+}
+.label-input-container > label::after {
+    content: "*";
+    position: relative;
+    top: -3px;
+    left: 1px;
+    color: red;
+}
+
+.label-input-container  > input {
+    position: relative;
+    top: 8px;
+    left: -8px;
+}
+
+.label-input-container  > input:focus {
+    outline: none;
+}
+
+.submit__btn {
+    background-color: #6C25FF;
+    color: white;
+    font-size: 1.1rem;
+    margin-top: auto;
+    padding: 0.8rem;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+
+.agency__para {
+    margin-bottom: 0.3rem;
+}
+
+.agency__para::after {
+    content: "*";
+    position: relative;
+    top: -3px;
+    left: 1px;
+    color: red;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.radio__label {
+    position: relative;
+    display: inline-flex;
+    padding: 0.3rem;
+    gap: 0.5rem;
+}
+
+.radio__label::before {
+    content: "";
+    height: 1rem;
+    width: 1rem;
+    border: 1px solid #6C25FF;
+    border-radius: 50%;
+}
+
+.radio__label::after {
+    content: "";
+    position: absolute;
+    top: 46%;
+    left: 22.5%;
+    transform: translate(-50%, -50%);
+    height: 0.6rem;
+    width: 0.6rem;
+    background-image: linear-gradient(45deg, #6C25FF, #8F7CFF); /* Example linear gradient */
+    border-radius: 50%;
+    display: none;
+}
+
+input[type="radio"]:checked + .radio__label::after {
+    display: block;
+}
+
+/* login */
+
+.label-input-container__login {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.label-input-container__login  > label {
+    position: absolute;
+    z-index: 1000;
+    background-color: white;
+    font-size: 0.8rem;
+    color: #6C25FF;
+    font-weight: 500;
+}
+
+.label-input-container__login   > input {
+    position: relative;
+    top: 8px;
+    left: -8px;
+}
+
+.label-input-container__login   > input:focus {
+    outline: none;
+}
+
+.login__btn {
+    background-color: #6C25FF;
+    font-size: 1.1rem;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+.login__btn > a ,.submit__btn > a{
+    color: inherit;
+    text-decoration: none;
+}
+
+/* account */
+.account__container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.account__page {
+    max-width: 40%;
+}
+
+.account__page > .header{
+    margin-bottom: 1.1rem;
+}
+
+.image__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0.5rem 1rem;
+}
+.image__container > img {
+    display: block;
+    object-fit: cover;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.image__container > .info {
+    align-self: flex-start;
+}
+
+/* Resposive */
+@media(max-width:860px) {
+   .landing__page {
+        width: 60%;
+   }
+   .signup__page {
+        width: 50%;
+   }
+   .account__page {
+        max-width: 60%;
+   }
+}
+@media(max-width:460px) {
+    .landing__page {
+        width: 90%;
+   }
+   .signup__page {
+        width: 85%;
+    }
+    .account__page {
+        max-width: 90%;
+   }
+}
