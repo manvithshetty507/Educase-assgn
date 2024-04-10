@@ -57,7 +57,7 @@ function SignupPage() {
           </div>
 
           <div className="label-input-container">
-            <label htmlFor="company">Company</label>
+            <label htmlFor="company">Company name</label>
             <input type="text" id="company" value={company} onChange={e => setCompany(e.target.value)} />
           </div>
 
